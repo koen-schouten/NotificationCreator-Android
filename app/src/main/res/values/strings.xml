@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">NotificationCreator</string>
+
+    <string name="nav_header_title">Drawer Header</string>
+
+    <string name="notification_channel_list_menu_item">Channel List</string>
+    <string name="notification_list_menu_item">Notification List</string>
+
+    <!--edit notification form-->
+    <string name="create_notification_fragment_title">Create Notification</string>
+    <string name="create_notification_form_title_hint">Title</string>
+    <string name="create_notification_form_message_hint">Message</string>
+    <string name="create_notification_form_submit_button_text">Create</string>
+    <string name="create_notification_channel_menu_item">Create Channel</string>
+    <string name="create_notification_form_date_field">Date</string>
+    <string name="create_notification_form_time_field">Time</string>
+    <string name="create_notification_menu_item">Create Notification</string>
+    <string name="create_notification_form_channel_description">Notification channel:</string>
+    <string name="delete_notification_form_submit_button_text">Delete</string>
+    <string name="edit_notification_fragment_title">Edit Notification</string>
+    <string name="edit_notification_form_submit_button_text">Modify</string>
+
+
+    <!--Create notification channel form-->
+    <string name="create_notification_channel_form_submit_button_text">Create</string>
+    <string name="create_notification_channel_form_title_hint">Name</string>
+    <string name="create_notification_channel_form_description_hint">Description</string>
+    <string name="create_notification_channel_form_importance_level_description">Channel Importance Level</string>
+
+    <!--Drawer-->
+    <string name="android_settings_menu_item">App Settings</string>
+    <string name="menu_header_notifications">Notifications</string>
+    <string name="menu_header_channels">Channels</string>
+    <string name="menu_header_android_settings">Android Settings</string>
+    <string name="android_notification_settings_menu_item">Notification Settings</string>
+
+    <!--Delete Notification dialog-->
+    <string name="delete_alert_dialog_message">Are you sure you want to delete this notification?</string>
+    <string name="delete_alert_dialog_title">Delete Notification</string>
+
+    <!--Undo SnackBar-->
+    <string name="delete_snackbar_text">Deleted</string>
+    <string name="delete_snackbar_action_text">UNDO</string>
+
+    <!-- fragment titles -->
+    <string name="notification_list_fragment_label">Notification List</string>
+    <string name="notification_channel_list_fragment_label">Notification Channels</string>
+
+</resources>

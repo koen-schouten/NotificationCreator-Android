@@ -1,0 +1,82 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.NotificationCreator" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/dark_gray</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/primary_color</item>
+        <item name="colorSecondaryVariant">@color/primary_color_light</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
+        <!-- Customize your theme here. -->
+        <item name="floatingActionButtonStyle">@style/Widget.App.ExtendedFloatingActionButton</item>
+        <!-- Button Style -->
+        <item name="materialButtonStyle">@style/ButtonStyle</item>
+
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="toolbarStyle">@style/ToolbarStyle</item>
+
+        <item name="android:datePickerDialogTheme">@style/DialogTheme</item>
+        <item name="android:timePickerDialogTheme">@style/DialogTheme</item>
+        <item name="android:alertDialogTheme">@style/DialogTheme</item>
+
+    </style>
+
+    <style name="DialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog" >
+        <item name="colorPrimary">@color/white</item>
+
+    </style>
+
+
+    <style name="ToolbarStyle" parent="Widget.MaterialComponents.Toolbar.Primary">
+
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+    </style>
+
+    <style name="ButtonStyle" parent="Widget.MaterialComponents.Button">
+    </style>
+
+    <style name="list_body_title">
+        <item name="android:textColor">@android:color/primary_text_dark</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Material.Medium</item>
+    </style>
+
+    <style name="list_body_message">
+        <item name="android:textColor">@android:color/primary_text_dark</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Material.Small</item>
+    </style>
+
+    <style name="list_body_date">
+        <item name="android:textColor">@android:color/primary_text_dark</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Material.Small</item>
+    </style>
+
+    <style name="DrawerHeader">
+        <item name="android:background">@color/dark_gray</item>
+        <item name="android:textColor">@android:color/primary_text_dark</item>
+    </style>
+
+
+
+    <style name="Widget.App.ExtendedFloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+
+    </style>
+
+</resources>

@@ -1,0 +1,137 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "4a9510337604ae76af79d05bca27bfdb",
+    "entities": [
+      {
+        "tableName": "NotificationDB",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`notification_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `notification_channel_id` INTEGER NOT NULL, `content_title` TEXT, `content_message` TEXT, `notification_date` INTEGER, `flag_deleted` INTEGER NOT NULL DEFAULT false, FOREIGN KEY(`notification_channel_id`) REFERENCES `NotificationChannelDB`(`notification_channel_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "notificationID",
+            "columnName": "notification_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "notificationChannelId",
+            "columnName": "notification_channel_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contentTitle",
+            "columnName": "content_title",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "contentMessage",
+            "columnName": "content_message",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "notificationDate",
+            "columnName": "notification_date",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "flagDeleted",
+            "columnName": "flag_deleted",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "false"
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "notification_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_NotificationDB_notification_channel_id",
+            "unique": false,
+            "columnNames": [
+              "notification_channel_id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_NotificationDB_notification_channel_id` ON `${TABLE_NAME}` (`notification_channel_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "NotificationChannelDB",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "notification_channel_id"
+            ],
+            "referencedColumns": [
+              "notification_channel_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "NotificationChannelDB",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`notification_channel_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `title` TEXT, `description` TEXT, `importance` INTEGER, `date_created` INTEGER, `flag_deleted` INTEGER NOT NULL DEFAULT false)",
+        "fields": [
+          {
+            "fieldPath": "notificationChannelID",
+            "columnName": "notification_channel_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "importance",
+            "columnName": "importance",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "date_created",
+            "columnName": "date_created",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "flagDeleted",
+            "columnName": "flag_deleted",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "false"
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "notification_channel_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '4a9510337604ae76af79d05bca27bfdb')"
+    ]
+  }
+}
